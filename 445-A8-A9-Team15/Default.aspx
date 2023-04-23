@@ -12,7 +12,9 @@
         <table id="LoginTable" cellpadding="4" runat="server">
             <tr>
                 <td><asp:Button runat="server" ID="MemberPageBtn" Text="Member Page" OnClick="MemberPageBtn_Click"/></td>
-                <td><asp:Button runat="server" ID="MemberLoginBtn" Text="Member Login" OnClick="MemberLoginBtn_Click"></asp:Button></td>
+                <td><asp:Button runat="server" ID="MemberLoginBtn" Text="Member Login" OnClick="MemberLoginBtn_Click"></asp:Button>
+                    
+                </td>
             </tr>
             <tr>
                 <td><asp:Button runat="server" ID="StaffPageBtn" Text="Staff Page" OnClick="StaffPageBtn_Click"/></td>

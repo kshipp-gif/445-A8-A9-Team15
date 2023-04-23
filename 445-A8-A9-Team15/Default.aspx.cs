@@ -26,11 +26,13 @@ namespace _445_A8_A9_Team15
         protected void StaffPageBtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("Staff.aspx");
+            // Response.Redirect("Admin.aspx"); it really is admin page
         }
 
         protected void StaffLoginBtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");
         }
+
     }
 }

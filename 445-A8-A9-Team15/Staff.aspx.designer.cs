@@ -7,63 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _445_A8_A9_Team15 {
+namespace JoseRequiredServicesTryItPage {
 
 
-    public partial class _Default {
+    public partial class WebForm2 {
 
         /// <summary>
-        /// LoginTable control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable LoginTable;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// MemberPageBtn control.
+        /// usernameInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button MemberPageBtn;
+        protected global::System.Web.UI.WebControls.TextBox usernameInput;
 
         /// <summary>
-        /// MemberLoginBtn control.
+        /// passwordInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button MemberLoginBtn;
+        protected global::System.Web.UI.WebControls.TextBox passwordInput;
 
         /// <summary>
-        /// StaffPageBtn control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button StaffPageBtn;
-
-        /// <summary>
-        /// StaffLoginBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button StaffLoginBtn;
-
-        /// <summary>
-        /// Output control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Output;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }
