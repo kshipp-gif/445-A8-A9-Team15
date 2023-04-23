@@ -61,7 +61,7 @@ namespace _445_A8_A9_Team15
                 myPwd.InnerText = encryptedPassword;
 
                 myDoc.Save(filepath);
-                Output.Text = String.Format("Registration successful, welcome {0}.", user);
+                Output.Text = String.Format("Registration successful, welcome {0}. Please log in with your newly registered information.", user);
                 return;
             }
             Output.Text = "Incorrect Captcha";
