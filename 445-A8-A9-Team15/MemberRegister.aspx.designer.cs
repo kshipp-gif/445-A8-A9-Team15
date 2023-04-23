@@ -42,6 +42,15 @@ namespace _445_A8_A9_Team15
         protected global::System.Web.UI.WebControls.TextBox PasswordText;
 
         /// <summary>
+        /// CaptchaGuessText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CaptchaGuessText;
+
+        /// <summary>
         /// RegisterButton control.
         /// </summary>
         /// <remarks>

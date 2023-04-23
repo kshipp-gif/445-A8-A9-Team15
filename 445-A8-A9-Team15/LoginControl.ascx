@@ -55,7 +55,7 @@
 
         foreach (XmlNode node in rootElement.ChildNodes)
         {
-            if (node["username"].InnerText == user)
+            if (node["username"].InnerText == user && user != "test")
             {
                 if (node["password"].InnerText == encryptedPassword)
                 {
@@ -65,6 +65,16 @@
                 else // username exists but password does not match
                 {
                     Output.Text = "Password does not match username";
+                }
+            }
+
+            // For "test" user only
+            if (node["username"].InnerText == user && user == "test")
+            {
+                if (node["password"].InnerText == "password")
+                {
+                    Output.Text = "Success!";
+                    Response.Redirect("Default.aspx"); // Redirect to the member page if credentials are valid
                 }
             }
         }

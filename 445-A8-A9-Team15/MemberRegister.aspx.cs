@@ -41,20 +41,30 @@ namespace _445_A8_A9_Team15
                     }
                 }
             }
-            // Add a new user into the XML
-            XmlElement myMember = myDoc.CreateElement("member", rootElement.NamespaceURI);
-            rootElement.AppendChild(myMember);
 
-            XmlElement myUser = myDoc.CreateElement("username", rootElement.NamespaceURI);
-            myMember.AppendChild(myUser);
-            myUser.InnerText = user;
+            // Captcha verification
+            string captchaGuess = CaptchaGuessText.Text;
+            string captchaActual = (string)HttpContext.Current.Session["CaptchaImageText"];
+            
+            if (captchaGuess == captchaActual)
+            {
+                // Add a new user into the XML
+                XmlElement myMember = myDoc.CreateElement("member", rootElement.NamespaceURI);
+                rootElement.AppendChild(myMember);
 
-            XmlElement myPwd = myDoc.CreateElement("password", rootElement.NamespaceURI);
-            myMember.AppendChild(myPwd);
-            myPwd.InnerText = encryptedPassword;
+                XmlElement myUser = myDoc.CreateElement("username", rootElement.NamespaceURI);
+                myMember.AppendChild(myUser);
+                myUser.InnerText = user;
 
-            myDoc.Save(filepath);
-            Output.Text = String.Format("Registration successful, welcome {0}.", user);
+                XmlElement myPwd = myDoc.CreateElement("password", rootElement.NamespaceURI);
+                myMember.AppendChild(myPwd);
+                myPwd.InnerText = encryptedPassword;
+
+                myDoc.Save(filepath);
+                Output.Text = String.Format("Registration successful, welcome {0}.", user);
+                return;
+            }
+            Output.Text = "Incorrect Captcha";
             return;
         }
 
