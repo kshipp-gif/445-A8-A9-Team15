@@ -1,42 +1,54 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="_445_A8_A9_Team15._Default" %>
+<%@ Register tagPrefix="user" tagName="LoginControl" src="LoginControl.ascx" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Default Page</h1>
+    <hr/>
+    <div>
+        <h3>How to sign up for services:</h3>
+        <p>Users must register via the member register link which will grant access to the Member Page. The Member Page will contain links to all services.</p>
+        <%-- <user:LoginControl ID="MyLogin" BackColor="#ccccff" runat="server"/> --%>
+        <table id="LoginTable" cellpadding="4" runat="server">
+            <tr>
+                <td><asp:Button runat="server" ID="MemberPageBtn" Text="Member Page" OnClick="MemberPageBtn_Click"/></td>
+                <td><asp:Button runat="server" ID="MemberLoginBtn" Text="Member Login" OnClick="MemberLoginBtn_Click"></asp:Button></td>
+            </tr>
+            <tr>
+                <td><asp:Button runat="server" ID="StaffPageBtn" Text="Staff Page" OnClick="StaffPageBtn_Click"/></td>
+                <td><asp:Button runat="server" ID="StaffLoginBtn" Text="Staff Login" OnClick="StaffLoginBtn_Click"></asp:Button></td>
+            </tr>
+        </table>
+        <br/>
+        <p><asp:Label runat="server" ID="Output"></asp:Label></p>
     </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
+    <hr/>
+    <div>
+        <h3>How to test services:</h3>
+        <p>Users can test services by navigating to the respective pages from the Member Page. All services are listed with links in the service directory.</p>
+        <p>The directory also includes test pages for the local component layer like Global.asax and DLL.</p>
+        <hr/>
+        <h3>Test cases and inputs:</h3>
+        <ul>
+            <li>Blah Service</li>
+            <ul>
+                <li>Blah test cases & inputs</li>
+            </ul>
+            <li>Blah Service</li>
+            <ul>
+                <li>Blah test cases & inputs</li>
+            </ul>
+            <li>Blah Service</li>
+            <ul>
+                <li>Blah test cases & inputs</li>
+            </ul>
+        </ul>
     </div>
-
 </asp:Content>
+
+<script language="c#" runat="server">
+    void Page_Load(Object sender, EventArgs e)
+    {
+        
+    }
+</script>

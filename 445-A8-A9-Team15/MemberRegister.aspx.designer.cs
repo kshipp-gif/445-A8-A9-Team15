@@ -11,53 +11,62 @@ namespace _445_A8_A9_Team15
 {
 
 
-    public partial class _Default
+    public partial class MemberRegister
     {
 
         /// <summary>
-        /// LoginTable control.
+        /// RegisterTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable LoginTable;
+        protected global::System.Web.UI.HtmlControls.HtmlTable RegisterTable;
 
         /// <summary>
-        /// MemberPageBtn control.
+        /// UsernameText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button MemberPageBtn;
+        protected global::System.Web.UI.WebControls.TextBox UsernameText;
 
         /// <summary>
-        /// MemberLoginBtn control.
+        /// PasswordText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button MemberLoginBtn;
+        protected global::System.Web.UI.WebControls.TextBox PasswordText;
 
         /// <summary>
-        /// StaffPageBtn control.
+        /// RegisterButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button StaffPageBtn;
+        protected global::System.Web.UI.WebControls.Button RegisterButton;
 
         /// <summary>
-        /// StaffLoginBtn control.
+        /// LoginBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button StaffLoginBtn;
+        protected global::System.Web.UI.WebControls.Button LoginBtn;
+
+        /// <summary>
+        /// HomeBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button HomeBtn;
 
         /// <summary>
         /// Output control.

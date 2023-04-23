@@ -11,16 +11,16 @@ namespace _445_A8_A9_Team15
 {
 
 
-    public partial class SiteMaster
+    public partial class Login
     {
 
         /// <summary>
-        /// MainContent control.
+        /// MyLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::_445_A8_A9_Team15.LoginControl MyLogin;
     }
 }

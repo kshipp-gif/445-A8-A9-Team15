@@ -11,53 +11,44 @@ namespace _445_A8_A9_Team15
 {
 
 
-    public partial class _Default
+    public partial class LoginControl
     {
 
         /// <summary>
-        /// LoginTable control.
+        /// MyTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable LoginTable;
+        protected global::System.Web.UI.HtmlControls.HtmlTable MyTable;
 
         /// <summary>
-        /// MemberPageBtn control.
+        /// UsernameText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button MemberPageBtn;
+        protected global::System.Web.UI.WebControls.TextBox UsernameText;
 
         /// <summary>
-        /// MemberLoginBtn control.
+        /// PasswordText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button MemberLoginBtn;
+        protected global::System.Web.UI.WebControls.TextBox PasswordText;
 
         /// <summary>
-        /// StaffPageBtn control.
+        /// LoginButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button StaffPageBtn;
-
-        /// <summary>
-        /// StaffLoginBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button StaffLoginBtn;
+        protected global::System.Web.UI.WebControls.LinkButton LoginButton;
 
         /// <summary>
         /// Output control.
