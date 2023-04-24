@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://webstrar164.fulton.asu.edu/page6/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://webstrar164.fulton.asu.edu/page6/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://webstrar164.fulton.asu.edu/page6/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_MetricToImperial_InputMessage">
+    <wsdl:part name="parameters" element="tns:MetricToImperial" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MetricToImperial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MetricToImperialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ImperialToMetric_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImperialToMetric" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ImperialToMetric_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImperialToMetricResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SortService_InputMessage">
+    <wsdl:part name="parameters" element="tns:SortService" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SortService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SortServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MergeSort_InputMessage">
+    <wsdl:part name="parameters" element="tns:MergeSort" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MergeSort_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MergeSortResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Merge_InputMessage">
+    <wsdl:part name="parameters" element="tns:Merge" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Merge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MergeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CalculateHourFromUTC_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateHourFromUTC" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CalculateHourFromUTC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateHourFromUTCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CalculateHourToUTC_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateHourToUTC" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CalculateHourToUTC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateHourToUTCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ConvertToUTC_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToUTC" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ConvertToUTC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToUTCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ConvertFromUTC_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertFromUTC" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ConvertFromUTC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertFromUTCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStopWords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStopWords" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStopWords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStopWordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_WordFilter_InputMessage">
+    <wsdl:part name="parameters" element="tns:WordFilter" />
+  </wsdl:message>
+  <wsdl:message name="IService1_WordFilter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WordFilterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_StemmedWords_InputMessage">
+    <wsdl:part name="parameters" element="tns:StemmedWords" />
+  </wsdl:message>
+  <wsdl:message name="IService1_StemmedWords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StemmedWordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TopTenContentWords_InputMessage">
+    <wsdl:part name="parameters" element="tns:TopTenContentWords" />
+  </wsdl:message>
+  <wsdl:message name="IService1_TopTenContentWords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TopTenContentWordsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="MetricToImperial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/MetricToImperial" message="tns:IService1_MetricToImperial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MetricToImperialResponse" message="tns:IService1_MetricToImperial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImperialToMetric">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ImperialToMetric" message="tns:IService1_ImperialToMetric_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ImperialToMetricResponse" message="tns:IService1_ImperialToMetric_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SortService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SortService" message="tns:IService1_SortService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SortServiceResponse" message="tns:IService1_SortService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MergeSort">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/MergeSort" message="tns:IService1_MergeSort_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MergeSortResponse" message="tns:IService1_MergeSort_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Merge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Merge" message="tns:IService1_Merge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MergeResponse" message="tns:IService1_Merge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateHourFromUTC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CalculateHourFromUTC" message="tns:IService1_CalculateHourFromUTC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CalculateHourFromUTCResponse" message="tns:IService1_CalculateHourFromUTC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateHourToUTC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CalculateHourToUTC" message="tns:IService1_CalculateHourToUTC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CalculateHourToUTCResponse" message="tns:IService1_CalculateHourToUTC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToUTC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ConvertToUTC" message="tns:IService1_ConvertToUTC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ConvertToUTCResponse" message="tns:IService1_ConvertToUTC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertFromUTC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ConvertFromUTC" message="tns:IService1_ConvertFromUTC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ConvertFromUTCResponse" message="tns:IService1_ConvertFromUTC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStopWords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStopWords" message="tns:IService1_GetStopWords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStopWordsResponse" message="tns:IService1_GetStopWords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WordFilter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/WordFilter" message="tns:IService1_WordFilter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/WordFilterResponse" message="tns:IService1_WordFilter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StemmedWords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/StemmedWords" message="tns:IService1_StemmedWords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/StemmedWordsResponse" message="tns:IService1_StemmedWords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TopTenContentWords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/TopTenContentWords" message="tns:IService1_TopTenContentWords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/TopTenContentWordsResponse" message="tns:IService1_TopTenContentWords_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MetricToImperial">
+      <soap:operation soapAction="http://tempuri.org/IService1/MetricToImperial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImperialToMetric">
+      <soap:operation soapAction="http://tempuri.org/IService1/ImperialToMetric" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SortService">
+      <soap:operation soapAction="http://tempuri.org/IService1/SortService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MergeSort">
+      <soap:operation soapAction="http://tempuri.org/IService1/MergeSort" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Merge">
+      <soap:operation soapAction="http://tempuri.org/IService1/Merge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateHourFromUTC">
+      <soap:operation soapAction="http://tempuri.org/IService1/CalculateHourFromUTC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateHourToUTC">
+      <soap:operation soapAction="http://tempuri.org/IService1/CalculateHourToUTC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToUTC">
+      <soap:operation soapAction="http://tempuri.org/IService1/ConvertToUTC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertFromUTC">
+      <soap:operation soapAction="http://tempuri.org/IService1/ConvertFromUTC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStopWords">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStopWords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WordFilter">
+      <soap:operation soapAction="http://tempuri.org/IService1/WordFilter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StemmedWords">
+      <soap:operation soapAction="http://tempuri.org/IService1/StemmedWords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TopTenContentWords">
+      <soap:operation soapAction="http://tempuri.org/IService1/TopTenContentWords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://webstrar164.fulton.asu.edu/page6/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
