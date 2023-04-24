@@ -1,4 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Member>
-  <Member username="TA" password="lyqBfSrdJWcU2RAdhgJ6dg==" />
-</Member>
+<members>
+	<member>
+		<username>TA</username>
+		<password>lyqBfSrdJWcU2RAdhgJ6dg==</password>
+	</member>
+</members>
