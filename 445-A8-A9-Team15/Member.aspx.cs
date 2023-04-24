@@ -172,7 +172,7 @@ namespace _445_A8_A9_Team15
         protected void Button4_Click(object sender, EventArgs e)
         {
             string zipcode = TextBox3.Text;
-            NaturalHazardService.Service1Client client = new NaturalHazardService.Service1Client("BasicHttpBinding_IService1");
+            NaturalHazardService.Service1Client client = new NaturalHazardService.Service1Client();
             string results = client.getLocationFromZip(Int32.Parse(zipcode));
             Label27.Text = results;
         }

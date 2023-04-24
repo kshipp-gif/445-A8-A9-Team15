@@ -117,9 +117,6 @@
             <div>
             <%-- F) Results or output of service (label or listbox) --%>
                 <p>
-                <%--<asp:Label ID="Label1" runat="server" Text="Num2Words Service Results"></asp:Label>--%><br />
-                <br />
-                <br />
                 <asp:Label ID="Label30" runat="server" Text="MeasurementConversion Results: "></asp:Label><br />
                 <asp:Label ID="resultsLabel" runat="server"></asp:Label>
                 </p>
