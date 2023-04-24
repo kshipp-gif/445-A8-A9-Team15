@@ -60,7 +60,7 @@
                 if (node["password"].InnerText == encryptedPassword)
                 {
                     Output.Text = "Success!";
-                    Response.Redirect("Default.aspx"); // Redirect to the member page if credentials are valid
+                    Response.Redirect("Member.aspx"); // Redirect to the member page if credentials are valid
                 }
                 else // username exists but password does not match
                 {
