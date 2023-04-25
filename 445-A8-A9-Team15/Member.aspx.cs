@@ -23,11 +23,13 @@ namespace _445_A8_A9_Team15
             {
                 Response.Redirect("~/MemberLogin.aspx");
             }
+       
         }
 
         private bool cookieChecker()
         {
             string username;
+
             try
             {
                 HttpCookie cookie = Request.Cookies.Get("memberCookie");
@@ -50,6 +52,7 @@ namespace _445_A8_A9_Team15
             else
             {
                 username = userCookie.Name;
+                persistence = userCookie.IsPersistent;
             }
             userName.Text = username;
             return true;
