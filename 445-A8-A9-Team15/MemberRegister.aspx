@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" Title="Member Register" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MemberRegister.aspx.cs" Inherits="_445_A8_A9_Team15.MemberRegister" %>
-<%@ Register tagPrefix="user" tagName="LoginControl" src="LoginControl.ascx" %>
 <%@ Register tagPrefix="captcha" tagName="CaptchaControl" src="CaptchaControl.ascx" %>
 
 

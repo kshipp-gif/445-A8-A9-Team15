@@ -9,14 +9,53 @@ using System.Xml.Linq;
 using Newtonsoft.Json;
 using System.IO;
 using System.Xml;
+using System.Web.Security;
 
 namespace _445_A8_A9_Team15
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+
+        private FormsAuthenticationTicket userCookie;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!this.cookieChecker())
+            {
+                Response.Redirect("~/MemberLogin.aspx");
+            }
+       
+        }
 
+        private bool cookieChecker()
+        {
+            string username;
+
+            try
+            {
+                HttpCookie cookie = Request.Cookies.Get("memberCookie");
+                if (cookie == null)
+                {
+
+                    return false;
+                }
+                userCookie = FormsAuthentication.Decrypt(cookie.Value);
+                }
+            catch (ArgumentException)
+            {
+                return false;
+            }
+
+            if (userCookie == null)
+            {
+                return false;
+            }
+            else
+            {
+                username = userCookie.Name;
+                persistence = userCookie.IsPersistent;
+            }
+            userName.Text = username;
+            return true;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -172,19 +211,24 @@ namespace _445_A8_A9_Team15
         protected void Button4_Click(object sender, EventArgs e)
         {
             string zipcode = TextBox3.Text;
-            NaturalHazardService.Service1Client client = new NaturalHazardService.Service1Client("BasicHttpBinding_IService1");
+            NaturalHazardService.Service1Client client = new NaturalHazardService.Service1Client();
             string results = client.getLocationFromZip(Int32.Parse(zipcode));
             Label27.Text = results;
         }
 
         protected void homePageButton_Click(object sender, EventArgs e)
         {
+            Response.Redirect("~/Default.aspx");
 
         }
 
-        protected void Logout_Click(object sender, EventArgs e)
+        protected void LogOutButton_Click(object sender, EventArgs e)
         {
-
+            if (Request.Cookies["memberCookie"] != null)
+            {
+                Response.Cookies["memberCookie"].Expires = DateTime.Now.AddDays(-1);
+            }
+            Response.Redirect("~/Default.aspx");
         }
     }
 }

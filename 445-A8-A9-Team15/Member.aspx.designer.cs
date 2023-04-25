@@ -60,13 +60,13 @@ namespace _445_A8_A9_Team15
         protected global::System.Web.UI.WebControls.Button homePageButton;
 
         /// <summary>
-        /// Logout control.
+        /// LogOutButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Logout;
+        protected global::System.Web.UI.WebControls.Button LogOutButton;
 
         /// <summary>
         /// Label3 control.

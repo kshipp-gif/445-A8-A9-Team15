@@ -11,10 +11,10 @@
         <h1><asp:Label ID="Label1" runat="server" Text="Member Page"></asp:Label></h1>
         <div>
             <asp:Label ID="Label2" runat="server" Text="Welcome back, " Font-Bold="True" Font-Size="Large"></asp:Label>
-            <asp:Label ID="userName" runat="server" Font-Bold="True" Font-Size="Large"></asp:Label>
+            <asp:Label ID="userName" runat="server" Text="userName" Font-Bold="True" Font-Size="Large"></asp:Label>
             <p>
                 <asp:Button ID="homePageButton" runat="server" Text="Home Page" OnClick="homePageButton_Click"/>
-                <asp:Button ID="Logout" runat="server" Text="Log out" OnClick="Logout_Click" />
+                <asp:Button ID="LogOutButton" runat="server" Text="Log Out" OnClick="LogOutButton_Click"/>
             </p>
 
 
@@ -117,9 +117,6 @@
             <div>
             <%-- F) Results or output of service (label or listbox) --%>
                 <p>
-                <%--<asp:Label ID="Label1" runat="server" Text="Num2Words Service Results"></asp:Label>--%><br />
-                <br />
-                <br />
                 <asp:Label ID="Label30" runat="server" Text="MeasurementConversion Results: "></asp:Label><br />
                 <asp:Label ID="resultsLabel" runat="server"></asp:Label>
                 </p>
