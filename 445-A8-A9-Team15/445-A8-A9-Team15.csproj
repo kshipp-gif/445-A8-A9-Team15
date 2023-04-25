@@ -264,7 +264,6 @@
     <Content Include="MemberLogin.aspx" />
     <Content Include="MemberRegister.aspx" />
     <Content Include="Site.Master" />
-    <Content Include="Staff_E.aspx" />
     <Content Include="TryIt-Page.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -380,13 +379,6 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Staff_E.aspx.cs">
-      <DependentUpon>Staff_E.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Staff_E.aspx.designer.cs">
-      <DependentUpon>Staff_E.aspx</DependentUpon>
     </Compile>
     <Compile Include="TryIt-Page.aspx.cs">
       <DependentUpon>TryIt-Page.aspx</DependentUpon>
