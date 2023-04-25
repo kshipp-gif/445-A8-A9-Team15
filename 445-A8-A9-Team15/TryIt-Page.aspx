@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="Try-It" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TryIt-Page.aspx.cs" Inherits="_445_A8_A9_Team15.TryIt_Page" %>
-<%@ Register tagPrefix="user" tagName="LoginControl" src="LoginControl.ascx" %>
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
@@ -96,16 +95,7 @@
         </div>
     </div>
 
-<%-- LOGIN STARTS HERE--%>
-    <div>
-        <h1><b>Login User Control: Try-It Page</b></h1>
-        <h3>The Login User Control is a user control that allows a user to login with a username and password</h3>
-        <p>Login User Control: Input of two strings (username and password) with a success/failure output string</p>
-        <br/>
-        <p>**Full functionality will be available in A9**</p>
-        <p>Use "username" as the username and "password" as the password to see the success message</p>
-        <user:LoginControl ID="MyLogin" BackColor="#ccccff" runat="server"/>
-    </div> 
+
     
 <%-- GLOBAL.ASAX STARTS HERE --%>
     <div>

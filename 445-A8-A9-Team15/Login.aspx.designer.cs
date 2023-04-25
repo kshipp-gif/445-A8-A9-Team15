@@ -51,6 +51,15 @@ namespace _445_A8_A9_Team15
         protected global::System.Web.UI.WebControls.Button LoginBtn;
 
         /// <summary>
+        /// CookieCheckBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CookieCheckBox;
+
+        /// <summary>
         /// Output control.
         /// </summary>
         /// <remarks>

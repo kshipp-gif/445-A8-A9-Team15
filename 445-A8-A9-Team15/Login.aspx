@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="Staff Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="_445_A8_A9_Team15.Login" %>
-<%@ Register tagPrefix="user" tagName="LoginControl" src="LoginControl.ascx" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Staff Login</h2>
@@ -15,6 +14,7 @@
         <tr>
             <td></td>
             <td><asp:Button runat="server" ID="LoginBtn" Text="Log in" OnClick="LoginBtn_Click"/></td>
+            <td><asp:CheckBox runat="server" ID="CookieCheckBox" Text="Remember me"/></td>
         </tr>
     </table>
     <asp:Label runat="server" ID="Output"></asp:Label>

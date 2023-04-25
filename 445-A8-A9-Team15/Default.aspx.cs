@@ -15,7 +15,7 @@ namespace _445_A8_A9_Team15
 
         protected void MemberPageBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("MemberRegister.aspx");
+            Response.Redirect("Member.aspx");
         }
 
         protected void MemberLoginBtn_Click(object sender, EventArgs e)
