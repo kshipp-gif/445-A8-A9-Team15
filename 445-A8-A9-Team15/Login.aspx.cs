@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 using JoseDllLibrary;
+using System.Web.Security;
 
 namespace _445_A8_A9_Team15
 {
@@ -16,24 +17,22 @@ namespace _445_A8_A9_Team15
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            HttpCookie myCookies = Request.Cookies["LoginCookie"];
-            DateTime now = DateTime.Now;
+
             
         }
 
-        public void createMemberCookie(string userName, string password)
+        private void createCookieTicket(string username, bool isPersistent)
         {
-            HttpCookie loginCookie = new HttpCookie("username", "password");
-
-            //set cookie values 
-            loginCookie.Values["username"] = userName;
-            loginCookie.Values["password"] = password;
-
-            loginCookie.Expires = DateTime.Now.AddDays(5); //cookie expires in 5 days 
-
-            loginCookie.Secure = true;
-
-            Response.Cookies.Add(loginCookie);
+            FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(
+                1,
+                username,
+                DateTime.Now,
+                DateTime.Now.AddMinutes(30),
+                isPersistent,
+                "");
+            string encryptedTicket = FormsAuthentication.Encrypt(ticket);
+            HttpCookie cookie = new HttpCookie("staffCookie", encryptedTicket);
+            Response.Cookies.Add(cookie);
         }
 
         protected void LoginBtn_Click(object sender, EventArgs e)
@@ -45,7 +44,7 @@ namespace _445_A8_A9_Team15
         public void AuthenticateUser(string username, string pwd)
         {
             EncryptionAndDecrypion Encryptor = new EncryptionAndDecrypion();
-            string filepath = HttpRuntime.AppDomainAppPath + @"\App_Data\Member.xml";
+            string filepath = HttpRuntime.AppDomainAppPath + @"\App_Data\Staff.xml";
             string user = username;
             string password = pwd;
 
@@ -63,8 +62,9 @@ namespace _445_A8_A9_Team15
                 {
                     if (node["password"].InnerText == encryptedPassword)
                     {
+                        createCookieTicket(username, CookieCheckBox.Checked);
                         Output.Text = "Success!";
-                        Response.Redirect("Member.aspx"); // Redirect to the member page if credentials are valid
+                        Response.Redirect("Staff.aspx"); // Redirect to the member page if credentials are valid
                     }
                     else // username exists but password does not match
                     {

@@ -10,6 +10,12 @@
     <form id="form1" runat="server">
         <div>
             <h2>Welcome to the Staff & Admin Page!</h2>
+            <asp:Label ID="Label2" runat="server" Text="Staff Member, " Font-Bold="True" Font-Size="Large"></asp:Label>
+            <asp:Label ID="userName" runat="server" Text="userName" Font-Bold="True" Font-Size="Large"></asp:Label>
+            <p>
+                <asp:Button ID="homePageButton" runat="server" Text="Home Page" OnClick="homePageButton_Click"/>
+                <asp:Button ID="LogOutButton" runat="server" Text="Log Out" OnClick="LogOutButton_Click"/>
+            </p>
             <p>
                 
                 Please enter the username and password of the user you want to add to the Staff page access:<br /><br />

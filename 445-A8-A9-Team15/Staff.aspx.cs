@@ -8,10 +8,16 @@ using System.IO;
 using System.Xml;
 using System.Xml.Linq;
 using JoseDllLibrary;
+using System.Web.Security;
 
 namespace JoseRequiredServicesTryItPage {
     public partial class WebForm2 : System.Web.UI.Page {
+        private FormsAuthenticationTicket staffCookie;
         protected void Page_Load(object sender, EventArgs e) {
+            if (!this.cookieChecker())
+            {
+                Response.Redirect("~/Login.aspx");
+            }
             XDocument xmlDoc = XDocument.Load(Server.MapPath("~/App_Data/Staff.xml"));
             // Extract the data you want into a list
             var data = xmlDoc.Descendants("Member")
@@ -24,6 +30,36 @@ namespace JoseRequiredServicesTryItPage {
             // Bind the list to the GridView
             GridView1.DataSource = data;
             GridView1.DataBind();
+        }
+
+        private bool cookieChecker()
+        {
+            string username;
+            try
+            {
+                HttpCookie cookie = Request.Cookies.Get("staffCookie");
+                if (cookie == null)
+                {
+
+                    return false;
+                }
+                staffCookie = FormsAuthentication.Decrypt(cookie.Value);
+            }
+            catch (ArgumentException)
+            {
+                return false;
+            }
+
+            if (staffCookie == null)
+            {
+                return false;
+            }
+            else
+            {
+                username = staffCookie.Name;
+            }
+            userName.Text = username;
+            return true;
         }
 
         protected void Unnamed5_Click(object sender, EventArgs e) {
@@ -53,6 +89,20 @@ namespace JoseRequiredServicesTryItPage {
             // Bind the list to the GridView
             GridView1.DataSource = data;
             GridView1.DataBind();
+        }
+
+        protected void homePageButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Default.aspx");
+        }
+
+        protected void LogOutButton_Click(object sender, EventArgs e)
+        {
+            if (Request.Cookies["staffCookie"] != null)
+            {
+                Response.Cookies["staffCookie"].Expires = DateTime.Now.AddDays(-1);
+            }
+            Response.Redirect("~/Default.aspx");
         }
     }
 }
