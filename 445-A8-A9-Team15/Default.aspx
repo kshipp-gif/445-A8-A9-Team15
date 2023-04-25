@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="_445_A8_A9_Team15._Default" %>
+<%@ Register tagPrefix="directory" tagName="ServiceDirectory" src="ServiceDirectoryControl.ascx" %>
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
@@ -30,21 +31,10 @@
         <p>Users can test services by navigating to the respective pages from the Member Page. All services are listed with links in the service directory.</p>
         <p>The directory also includes test pages for the local component layer like Global.asax and DLL.</p>
         <hr/>
-        <h3>Test cases and inputs:</h3>
-        <ul>
-            <li>Blah Service</li>
-            <ul>
-                <li>Blah test cases & inputs</li>
-            </ul>
-            <li>Blah Service</li>
-            <ul>
-                <li>Blah test cases & inputs</li>
-            </ul>
-            <li>Blah Service</li>
-            <ul>
-                <li>Blah test cases & inputs</li>
-            </ul>
-        </ul>
+        <h3>Service Directory of test cases and inputs:</h3>
+    </div>
+    <div>
+        <directory:ServiceDirectory runat="server"/>
     </div>
 </asp:Content>
 

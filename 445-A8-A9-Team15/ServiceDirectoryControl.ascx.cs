@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace _445_A8_A9_Team15
 {
-    public partial class LoginControl : System.Web.UI.UserControl
+    public partial class ServiceDirectoryControl : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

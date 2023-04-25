@@ -238,6 +238,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="ServiceDirectoryControl.ascx" />
     <Content Include="Staff.aspx" />
     <Content Include="App_Data\Members.xml" />
     <Content Include="App_Data\Staff.xml" />
@@ -259,11 +260,9 @@
     </None>
     <Content Include="imageVerifier.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="LoginControl.ascx" />
     <Content Include="MemberLogin.aspx" />
     <Content Include="MemberRegister.aspx" />
     <Content Include="Site.Master" />
-    <Content Include="TryIt-Page.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -284,6 +283,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceDirectoryControl.ascx.cs">
+      <DependentUpon>ServiceDirectoryControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServiceDirectoryControl.ascx.designer.cs">
+      <DependentUpon>ServiceDirectoryControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
@@ -350,13 +356,6 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LoginControl.ascx.cs">
-      <DependentUpon>LoginControl.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="LoginControl.ascx.designer.cs">
-      <DependentUpon>LoginControl.ascx</DependentUpon>
-    </Compile>
     <Compile Include="MemberLogin.aspx.cs">
       <DependentUpon>MemberLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -378,13 +377,6 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="TryIt-Page.aspx.cs">
-      <DependentUpon>TryIt-Page.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="TryIt-Page.aspx.designer.cs">
-      <DependentUpon>TryIt-Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Member.aspx.cs">
       <DependentUpon>Member.aspx</DependentUpon>
