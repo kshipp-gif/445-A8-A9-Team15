@@ -52,7 +52,6 @@ namespace _445_A8_A9_Team15
             else
             {
                 username = userCookie.Name;
-                persistence = userCookie.IsPersistent;
             }
             userName.Text = username;
             return true;
