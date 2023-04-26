@@ -1,4 +1,4 @@
-ï»¿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServiceDirectoryControl.ascx.cs" Inherits="_445_A8_A9_Team15.ServiceDirectoryControl" %>
+<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ServiceDirectoryControl.ascx.cs" Inherits="_445_A8_A9_Team15.ServiceDirectoryControl" %>
 
 <html xmlns:o="urn:schemas-microsoft-com:office:office"
 xmlns:x="urn:schemas-microsoft-com:office:excel"
@@ -692,7 +692,7 @@ tags will be replaced.-->
   <td class=xl693124 width=269 style='border-top:none;border-left:none;
   width:202pt'>&nbsp;</td>
   <td class=xl693124 width=355 style='border-top:none;border-left:none;
-  width:267pt'>This message will appear on any form within page8 assuming that
+  width:267pt'>This message will appear on any form within this application assuming that
   is the page the user begins the session at.</td>
   <td class=xl693124 width=291 style='border-top:none;border-left:none;
   width:218pt'>&nbsp;</td>
@@ -717,13 +717,13 @@ tags will be replaced.-->
   <td class=xl693124 width=93 style='border-top:none;border-left:none;
   width:70pt'>User Control</td>
   <td class=xl693124 width=249 style='border-top:none;border-left:none;
-  width:187pt'>Login Form</td>
+  width:187pt'>Captcha Generator</td>
   <td class=xl703124 width=269 style='border-top:none;border-left:none;
-  width:202pt'><a href="http://webstrar164.fulton.asu.edu/page8/TryIt-Page"><span
-  style='color:blue'>http://webstrar164.fulton.asu.edu/page8/TryIt-Page</span></a></td>
+  width:202pt'><a href="http://webstrar164.fulton.asu.edu/page10/TryIt-Page"><span
+  style='color:blue'>http://webstrar164.fulton.asu.edu/page10/TryIt-Page</span></a></td>
   <td class=xl693124 width=355 style='border-top:none;border-left:none;
-  width:267pt'>The user control is a login form that can be reused on multiple
-  pages without the need to reuse code</td>
+  width:267pt'>The user control is a captcha generator that can be reused on multiple
+  pages without the need to reuse code. There is also a button to generate a new image.</td>
   <td class=xl693124 width=291 style='border-top:none;border-left:none;
   width:218pt'>Wrote my own code and used local component to implement the
   service.</td>
@@ -782,7 +782,7 @@ tags will be replaced.-->
   width:187pt'>Input: String, double</td>
   <td class=xl693124 width=269 style='border-left:none;width:202pt'>&nbsp;</td>
   <td class=xl693124 width=355 style='border-top:none;border-left:none;
-  width:267pt'><span style='mso-spacerun:yes'>Â </span>Based on which unit types
+  width:267pt'><span style='mso-spacerun:yes'> </span>Based on which unit types
   are selected, the double is converted from imperial to metric or vice versa.
   The converted double is then returned.</td>
   <td class=xl693124 width=291 style='border-left:none;width:218pt'>&nbsp;</td>
@@ -814,7 +814,7 @@ tags will be replaced.-->
   <td class=xl693124 width=355 style='border-top:none;width:267pt'>Convert a
   string of space-separated numbers into a List of ints. A merge sort is then
   run on this List to put all the numbers into ascending order<span
-  style='mso-spacerun:yes'>Â </span></td>
+  style='mso-spacerun:yes'> </span></td>
   <td class=xl763124 width=291 style='width:218pt'>Wrote my own code and used
   local component to implement the service.</td>
  </tr>
